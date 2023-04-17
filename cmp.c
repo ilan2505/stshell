@@ -28,13 +28,13 @@ int main(int argc, char *argv[]) {
 
     FILE *f1 = fopen(argv[1], "r");
     if (f1 == NULL) {
-        printf("File1 error");
+        printf("Error in File1 \n");
         exit(1);
     }
 
     FILE *f2 = fopen(argv[2], "r");
     if (f2 == NULL) {
-        printf("File2 error");
+        printf("Error in File2\n");
         exit(1);
     }
 }
