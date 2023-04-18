@@ -76,6 +76,9 @@ int main(int argc, char *argv[])
         }
     }
     if(verb) printf ("equal\n");
+    
+    fclose(p1);
+    fclose(p2);
+ 
     return 0;
-
 }
