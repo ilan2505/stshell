@@ -69,7 +69,7 @@ int main(int argc, char *argv[])
            c2 = tolower(c2);
         }
 
-        if (c1 != c2))
+        if (c1 != c2)
         {
             if(verb) printf("distinct\n"); 
             return 1; 
@@ -77,8 +77,8 @@ int main(int argc, char *argv[])
     }
     if(verb) printf ("equal\n");
     
-    fclose(p1);
-    fclose(p2);
+    fclose(f1);
+    fclose(f2);
  
     return 0;
 }
