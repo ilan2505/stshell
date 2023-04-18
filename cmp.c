@@ -29,9 +29,6 @@ int main(int argc, char *argv[])
             ign = true;
     }
 
-    // printf("argv[3]== %s\n", argv[3]);
-    // printf("argv[4]== %s\n", argv[4]);
-
     FILE *f1 = fopen(argv[1], "r");
     
     if (f1 == NULL)
@@ -68,26 +65,11 @@ int main(int argc, char *argv[])
     {
         if(ign)
         {
-            if(islower(c1))
-            {
-                if( ! (c1 == c2 || (c1-32) == c2))
-                {
-                   if(verb) printf("distinct\n"); 
-                   return 1;
-                } 
-            }
-
-            else if (isupper(c2))
-            {
-                if( ! (c1 == c2 || (c1+32) == c2))
-                {
-                    if(verb) printf("distinct\n");
-                    return 1;
-                }
-            }
+           c1 = tolower(c1);
+           c2 = tolower(c2);
         }
 
-        else if (!(c1 == c2))
+        if (c1 != c2))
         {
             if(verb) printf("distinct\n"); 
             return 1; 
