@@ -1,9 +1,11 @@
+
+#include <ctype.h>
+#include <stdio.h>
+
 /* 
 Matala 2 in Operating systems
  by ilan Souffir and Nerya Rez
 */
-#include <ctype.h>
-#include <stdio.h>
 
 void encode(char *input) {
     char output[1024] = {'\0'};
