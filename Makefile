@@ -7,7 +7,8 @@ decode: decode.c codecA
 	$(CC) $(CFLAGS)  decode.c -ldl -o decode
 
 codecA: codecA.c
-	$(CC) $(CFLAGS) -shared -o libcodecA.so codecA.c
+	$(CC) $(CFLAGS) -shared -o codecA codecA.c
+	export LD_LIBRARY_PATH=.
 
 # decode: decode.o codecA.so codecB.so
 # 	$(CC) $(CFLAGS) decode.o codecA.so codecB.so -o decode 
