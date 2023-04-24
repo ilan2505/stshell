@@ -12,10 +12,10 @@ int main(int argc, char **argv) {
     void *lib_handle;
     void (*encode_func)(char*);
 
-    char lib_name[256];
-    snprintf(lib_name, sizeof(lib_name), "%s%s", argv[1], ".so");
+    // char lib_name[256];
+    // snprintf(lib_name, sizeof(lib_name), "%s%s", argv[1], ".so");
 
-    lib_handle = dlopen(lib_name, RTLD_NOW);
+    lib_handle = dlopen(argv[1], RTLD_LAZY);
     if (!lib_handle) {
         printf("Error loading library: %s\n", dlerror());
         return 1;
