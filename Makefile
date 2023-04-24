@@ -1,14 +1,18 @@
 CC = gcc
 CFLAGS = -Wall -Werror
+DFLAGS = -L. -Wl,-rpath,.
+
+.PHONY: all clean
 
 all: decode codecA
 
 decode: decode.c codecA
-	$(CC) $(CFLAGS)  decode.c -ldl -o decode
+	$(CC) $(CFLAGS) $(DFLAGS)  decode.c -ldl -o decode
 
 codecA: codecA.c
-	$(CC) $(CFLAGS) -shared -o codecA codecA.c
-	export LD_LIBRARY_PATH=.
+	$(CC) $(CFLAGS) -shared -fPIC -o codecA codecA.c
+
+ #export LD_LIBRARY_PATH=.
 
 # decode: decode.o codecA.so codecB.so
 # 	$(CC) $(CFLAGS) decode.o codecA.so codecB.so -o decode 
@@ -37,6 +41,6 @@ codecA: codecA.c
 
 
 clean:
-	rm -f *.o *.so decode
+	rm -f *.o *.so decode codecA
 
 .PHONY: clean

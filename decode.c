@@ -13,6 +13,12 @@ int main(int argc, char **argv) {
     void (*decode_func)(char*);
 
     // char lib_name[256];
+    // char a[20] = {'\0'};
+    // snprintf(a, sizeof(a), "lib%s.so", argv[1]);
+    // char* a;
+    // strcpy(a, argv[1]);
+    // strcat(a,".so");
+
     lib_handle = dlopen(argv[1], RTLD_LAZY);
     // lib_handle = dlopen(lib_name, RTLD_NOW);
     if (!lib_handle) {
