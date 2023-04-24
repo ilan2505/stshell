@@ -1,7 +1,7 @@
 
 #include <ctype.h>
 #include <stdio.h>
-
+#include "codec.h"
 /* 
 Matala 2 in Operating systems
  by ilan Souffir and Nerya Rez
