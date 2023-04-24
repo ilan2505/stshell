@@ -35,9 +35,40 @@ int main(int argc, char* argv[]){
         return 1;
     }
 
-    if (access(argv[2], F_OK) != -1 && !(strcmp(argv[3], "-f") == 0 || strcmp(argv[4], "-f") == 0)) {
+    FILE* f1 = fopen(argv[1], "r");
+
+    if(!f1){
+        return 1;
+    }
+
+    if (access(argv[2], F_OK) != -1 && ! frc) {
         printf("Target file exists. Use -f flag to force overwrite.\n");
         return 1;
     }
+
+    if(access(argv[2], F_OK) == -1 ){
+        printf("enter \n");
+        FILE* f2 = fopen(argv[2], "w");
+        printf("open f2\n");
+        char c1;
+        int i = 0;
+        while ((c1 = fgetc(f1)) != EOF)
+        {
+           printf("enter run %d\n", i); 
+           fputc(c1,f2);
+           printf("exit run %d\n", i);
+           printf(" %c \n" ,c1);
+           i++;
+        }
+        fclose(f2);
+        if(verb) printf("sucess");
+
+    }
+
+   fclose(f1);
+
+
+
+    return 0;
     
 }

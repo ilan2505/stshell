@@ -2,15 +2,14 @@ CC = gcc
 CFLAGS = -Wall -Werror
 DFLAGS = -L. -Wl,-rpath,.
 
-# .PHONY: all clean
 
-all: decode encode codecA codecB cmp 
+all: decode encode codecA codecB cmp copy
 
 cmp: cmp.c
 	$(CC) $(CFLAGS) cmp.c -o cmp
 
-# copy: copy.c
-# 	$(CC) $(CFLAGS) copy.c -o copy
+copy: copy.c
+	$(CC) $(CFLAGS) copy.c -o copy
 
 encode: encode.c codecA codecB
 	$(CC) $(CFLAGS) $(DFLAGS)  encode.c -ldl -o encode
@@ -25,6 +24,6 @@ codecB: codecB.c codec.h
 	$(CC) $(CFLAGS) -shared -fPIC -o codecB codecB.c
 
 clean:
-	rm -f *.o *.so decode encode codecA codecB cmp 
+	rm -f *.o *.so decode encode codecA codecB cmp copy
 
 .PHONY: all clean
