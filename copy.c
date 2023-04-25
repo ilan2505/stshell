@@ -30,7 +30,8 @@ int main(int argc, char* argv[]){
             frc = true;
     }
 
-    if (access(argv[1], F_OK) == -1) {
+    if (access(argv[1], F_OK) == -1) 
+    {
         printf("The file %s doesn't exist\n", argv[1]);
         return 1;
     }
