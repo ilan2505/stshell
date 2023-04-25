@@ -35,40 +35,52 @@ int main(int argc, char* argv[]){
         return 1;
     }
 
-    FILE* f1 = fopen(argv[1], "r");
+    FILE* f1 = fopen(argv[1], "rb");
 
-    if(!f1){
-        return 1;
-    }
-
-    if (access(argv[2], F_OK) != -1 && ! frc) {
-        printf("Target file exists. Use -f flag to force overwrite.\n");
-        return 1;
-    }
-
-    if(access(argv[2], F_OK) == -1 ){
-        printf("enter \n");
-        FILE* f2 = fopen(argv[2], "w");
-        printf("open f2\n");
-        char c1;
-        int i = 0;
-        while ((c1 = fgetc(f1)) != EOF)
+    if(!f1)
+    {
+        if(verb)
         {
-           printf("enter run %d\n", i); 
-           fputc(c1,f2);
-           printf("exit run %d\n", i);
-           printf(" %c \n" ,c1);
-           i++;
+            printf ("general failure\n");
         }
-        fclose(f2);
-        if(verb) printf("sucess");
-
+        return 1;
     }
 
+    if (access(argv[2], F_OK) != -1 && ! frc)
+    {
+        if(verb)
+        {
+            printf("Target file exists. Use -f flag to force overwrite.\n");
+        }
+        fclose(f1);
+        return 1;
+    }
+
+    else{
+        
+        FILE* f2 = fopen(argv[2], "wb");
+        
+        if(!f2)
+        {
+            if(verb) printf ("general failure\n");
+            return 1;
+        }
+
+        char buffer[1024];
+        size_t bytes_read;
+
+        while ((bytes_read = fread(buffer, 1, sizeof(buffer), f1)) > 0)
+        {
+
+        fwrite(buffer, 1, bytes_read, f2);
+
+        } 
+
+       fclose(f2); 
+       if(verb) printf("sucess\n");
+    }
+   
    fclose(f1);
+   return 0;
+} 
 
-
-
-    return 0;
-    
-}

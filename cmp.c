@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
             ign = true;
     }
 
-    FILE *f1 = fopen(argv[1], "r");
+    FILE *f1 = fopen(argv[1], "rb");
     
     if (f1 == NULL)
     {
@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    FILE *f2 = fopen(argv[2], "r");
+    FILE *f2 = fopen(argv[2], "rb");
 
     if (f2 == NULL)
     {
