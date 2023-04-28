@@ -31,7 +31,7 @@ For our exemple we wrote in the a.txt the line "123a Hello" and in the b.txt "12
 ```
 ### Results :
 <p align="center">
-  <img align="center" width=80% src = "https://user-images.githubusercontent.com/55143087/234904991-ad1f3930-db95-4105-9108-e68af7c3d744.png"/>
+  <img align="center" width=60% src = "https://user-images.githubusercontent.com/55143087/234904991-ad1f3930-db95-4105-9108-e68af7c3d744.png"/>
 </p>
 
 ## Tool 2 - copy :
