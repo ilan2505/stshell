@@ -40,3 +40,18 @@ For our exemple we wrote in the a.txt the line "123a Hello" and in the b.txt "12
 * The tool will create a new file, if it does not exist, but it will not overwrite a file if it do exist.
 * The tool will support -v flag, that will output “success” if the file is copied, or “target file exist” if this is the case, or “general failure” on some other problem (in addition to the returned INT value).
 * The tool will support -f flag (that means force), that allows to overwrite the target file.
+
+### How to run ?
+Here we have two exemples :
+* The first
+* The second 
+
+```
+./copy <file1> <file2> [-v] [-f]
+```
+### Results :
+<p align="center">
+  <img align="center" width=80% src = ""/>
+</p>
+
+# Part B - dynamic libraries :
