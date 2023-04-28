@@ -27,7 +27,7 @@ You need to create 2 text files, in our exemple : a.txt and b.txt and then you w
 For our exemple we wrote in the a.txt the line "123a Hello" and in the b.txt "123A HELLO"<br>
 
 ```
-./cmp <file1> <file2> -v -i
+./cmp <file1> <file2> [-v] [-i]
 ```
 ### Results :
 <p align="center">
