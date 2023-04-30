@@ -42,16 +42,43 @@ For our exemple we wrote in the a.txt the line "123a Hello" and in the b.txt "12
 * The tool will support -f flag (that means force), that allows to overwrite the target file.
 
 ### How to run ?
-Here we have two exemples :
-* The first
-* The second 
-
+Exemple 1 : We create 1 text file, in our exemple : a.txt and then you write what you want inside.<br>
+For our exemple we wrote in the a.txt the line "123a Hello".<br>
+Then with the command below we copy the same text to b.txt. We can see in the result that it worked.<br>
+<br>
+Exemple 2 : We now create 2 text file, in this exemple : a.txt and c.txt.<br>
+We write inside the a.txt "123a Hello" ans we write nothing in c.txt<br>
+We can see that the command doesn' work because the target file exists so we need to add the "-f" flag.<br>
+We can now see in the result that it worked.<br>
 ```
 ./copy <file1> <file2> [-v] [-f]
 ```
 ### Results :
 <p align="center">
-  <img align="center" width=80% src = ""/>
+  <img align="center" width=60% src = "https://user-images.githubusercontent.com/55143087/235365176-a554d928-b652-4221-9ed7-9af022073686.jpeg"/>
 </p>
 
 # Part B - dynamic libraries :
+We were requested to implement a coding library. We had two codding methods.<br>
+* Method a, named codecA: covert all lower case chars to upper case, and all upper case to lower case.<br>
+All other chars will remain unchanged.
+* Method b, named codecB: convert all chars to the 3-rd next char (adding a number of 3 to the ascii val).<br>
+The libraries should support “encode” and “decode” methods.
+Note: the libraries should be “reversable”, meaning that if one does “encode” and then “decode, he will
+get the original string.<br>
+<br>
+We were also requested to :<br>
+1) Write 2 different shared libraries , each implementing it’s algorithm<br>
+2) Write a two tools, named encode and decode, to utilize the libraries. The tools will get some text and
+convert it according to selected library.<br>
+
+### How to run ?
+You need to choose if you want to encode or decode a message and then choose if you want from CodecA or CodecB.
+
+```
+./encode/decode <codecA/B> <message>
+```
+### Results :
+<p align="center">
+  <img align="center" width=60% src = "https://user-images.githubusercontent.com/55143087/235365621-5ec61101-8bea-40b1-8ba5-d33f06bfff05.jpeg"/>
+</p>
