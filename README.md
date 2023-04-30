@@ -5,7 +5,7 @@ We will explain to you what is the subject of each part.
 
 # Authors : 
 * Souffir Ilan Meir : 342615648
-* Nerya 
+* Reznickovich Nerya : 316276989 
 
 # How to run the project ?
 First of all, you need to write this command when you open the terminal of the folder : 
@@ -113,3 +113,7 @@ And then we tryed to delete and add the new word "Heyyyyyyyyyyyyyyyyy" in a.txt 
 </p>
 
 ## Pipe Exemple :
+<p align="center">
+  <img align="center" width=60% src = "https://user-images.githubusercontent.com/55143087/235381854-c1791ef3-4e90-48d0-82ef-1c99557412e7.jpeg"/>
+</p>
+
