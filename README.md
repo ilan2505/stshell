@@ -1,6 +1,6 @@
 # Operating Systems - Home Work 2
 This project was made on Ubuntu 20.04 and all the screenshots are from Ubuntu.<br>
-In this Home Work, we have 3 parts:  files operations, dynamic libraries, and basic shell.<br>
+In this Home Work, we have 3 parts:  files operations, dynamic libraries, and c.<br>
 We will explain to you what is the subject of each part. 
 
 # Authors : 
@@ -82,3 +82,34 @@ You need to choose if you want to encode or decode a message and then choose if 
 <p align="center">
   <img align="center" width=60% src = "https://user-images.githubusercontent.com/55143087/235365621-5ec61101-8bea-40b1-8ba5-d33f06bfff05.jpeg"/>
 </p>
+
+# Part C - basic shell :
+We were requested to write a shell program named stshell (st for students).<br>
+The features were:<br>
+1) Be able to run CMD tools that exist on system (by fork + exec + wait).<br>
+2) Be able to stop running tool by pressing Ctrl+c, but not killing the shell itself (by signal handler).<br>
+3) Be able to redirect output with “>” and “>>”, and allow piping with “|”, at least for 2 following pipes.<br> 
+For example command like this should be supported “ls -l | grep aaa | wc” <br>
+4) be able to stop itself by “exit” command
+
+## Basic commands Exemple :
+As we can see in the picture below, the commands that we wrote in our stshell terminal worked :
+<br>
+<p align="center">
+  <img align="center" width=60% src = "https://user-images.githubusercontent.com/55143087/235366603-3b42e93b-f986-40f0-85e6-bdf037f92d61.jpeg"/>
+</p>
+
+## Redirect Exemple :
+Here we wanted to show how work the ">" and ">>".<br>
+">" write the command in the same file but by deleting what was before<br>
+">>" append to an existant file after the last line)<br>
+<br>
+You can see that with the cat command on a.txt (show all the file), the text was empty and then we add the path (pwd) inside with ">" and it worked.<br>
+Then we tryed to add to the a.txt the sentence "Hello World" with the echo command and ">>" and it worked.<br>
+And then we tryed to delete and add the new word "Heyyyyyyyyyyyyyyyyy" in a.txt and it worked with the help of ">".<br>
+<br>
+<p align="center">
+  <img align="center" width=60% src = "https://user-images.githubusercontent.com/55143087/235366630-24e83442-bc5f-45d1-b5ba-c634964ea7a2.jpeg"/>
+</p>
+
+## Pipe Exemple :
