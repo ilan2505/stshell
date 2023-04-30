@@ -3,7 +3,7 @@ CFLAGS = -Wall -Werror
 DFLAGS = -L. -Wl,-rpath,.
 
 
-all: decode encode codecA codecB cmp copy
+default: decode encode codecA codecB cmp copy
 
 cmp: cmp.c
 	$(CC) $(CFLAGS) cmp.c -o cmp
