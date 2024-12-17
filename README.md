@@ -4,8 +4,8 @@ In this Home Work, we have 3 parts:  files operations, dynamic libraries, and c.
 We will explain to you what is the subject of each part. 
 
 # Authors : 
-* Souffir Ilan Meir : 342615648
-* Reznickovich Nerya : 316276989 
+* Souffir Ilan Meir
+* Reznickovich Nerya
 
 # How to run the project ?
 First of all, you need to write this command when you open the terminal of the folder : 
